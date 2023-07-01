@@ -56,6 +56,8 @@ The Text to SQL application is built upon the following models and libraries:
 
 To make the Text to SQL application user-friendly and easily accessible, it is wrapped using Streamlit. 
 
+![Example](text2sql.png)
+
 ## Getting Started
 
 To run the Text to SQL application locally, follow these steps:
