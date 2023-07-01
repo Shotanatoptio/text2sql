@@ -2,6 +2,10 @@
 
 This repository contains a Text to SQL application that efficiently converts natural language text input about a marketing database into the correct SQL query.
 
+## Aplication Diagram
+
+![Example](app_diagram.png)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -52,6 +56,7 @@ The Text to SQL application is built upon the following models and libraries:
 
 - **OpenAI's gpt-3.5-turbo**
 - **LangChain.ai**
+
 ## Application Interface
 
 To make the Text to SQL application user-friendly and easily accessible, it is wrapped using Streamlit. 
