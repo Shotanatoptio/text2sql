@@ -1,0 +1,12 @@
+pandas
+clickhouse-connect
+llama-index
+langchain
+streamlit
+python-dotenv
+openai
+guardrails-ai
+redis
+clickhouse-driver
+sqlalchemy-clickhouse
+psycopg2
