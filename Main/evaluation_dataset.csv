@@ -1,0 +1,11 @@
+,Text,Query
+0,How many customers does the agency have?,SELECT COUNT(*) AS total_customers FROM `Customers`;
+1,What is the total cost of all marketing campaigns?,SELECT SUM(Cost) AS total_cost FROM `CampaignActivity`;
+2,How many active users does the platform currently have?,SELECT COUNT(*) AS active_users FROM `Users` WHERE Status = 'active';
+3,Which campaign generated the highest user activity?,"SELECT ca.CampaignId, COUNT(ua.VisitId) AS activity_count FROM `CampaignActivity` AS ca JOIN `UserActivity` AS ua ON ca.CampaignId = ua.CampaignId WHERE ua.VisitDate >= '2021-01-01' AND ua.VisitDate <= '2023-12-31' GROUP BY ca.CampaignId ORDER BY activity_count DESC LIMIT 1;"
+4,What is the total cost of campaigns on each platform?,"SELECT Platform, SUM(Cost) AS platform_total_cost FROM `CampaignActivity` WHERE AdStartDate >= '2021-01-01' AND AdEndDate <= '2023-12-31' GROUP BY Platform;"
+5,How many customers were acquired each month?,"SELECT toStartOfMonth(CreatedAt) AS month, COUNT(*) AS customer_count FROM `Customers` WHERE CreatedAt >= '2021-01-01' AND CreatedAt <= '2023-12-31' GROUP BY month ORDER BY month;"
+6,What is the average number of visits per user?,"WITH user_visits AS (SELECT UserId, COUNT(*) AS visit_count FROM `UserActivity` WHERE VisitDate >= '2021-01-01' AND VisitDate <= '2023-12-31' GROUP BY UserId) SELECT AVG(visit_count) AS average_visits_per_user FROM user_visits;"
+7,Which user has the highest number of visits?,"SELECT ua.UserId, COUNT(*) AS visit_count FROM `UserActivity` AS ua WHERE ua.VisitDate >= '2021-01-01' AND ua.VisitDate <= '2023-12-31' GROUP BY ua.UserId ORDER BY visit_count DESC LIMIT 1;"
+8,How many users signed up in each month of the current year?,"SELECT toStartOfMonth(RegDate) AS month, COUNT(*) AS signups_per_month FROM `Users` WHERE RegDate >= '2021-01-01' AND RegDate <= '2023-12-31' GROUP BY month ORDER BY month;"
+9,Which customers have not been active in the last 60 days?,"SELECT ac.CustomerId, ac.Name FROM `Customers` AS ac LEFT JOIN `UserActivity` AS ua ON ac.CustomerId = ua.UserId WHERE (ua.VisitDate < NOW() - INTERVAL 60 DAY OR ua.VisitDate IS NULL) AND ac.CreatedAt >= '2021-01-01' AND ac.CreatedAt <= '2023-12-31';"
