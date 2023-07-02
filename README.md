@@ -2,7 +2,7 @@
 
 This repository contains a Text to SQL application that efficiently converts natural language text input about a marketing database into the correct SQL query.
 
-## Aplication Diagram
+## Application Diagram
 
 ![Example](app_diagram.png)
 
@@ -48,7 +48,7 @@ The underlying database for this application is built in ClickHouse and comprise
    - Platform
    - AdStartDate
    - AdEndDate
-   - TotalCost
+   - Cost
 
 ## Models and Libraries
 
