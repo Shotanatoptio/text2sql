@@ -6,6 +6,12 @@ This repository contains a Text to SQL application that efficiently converts nat
 
 ![Example](app_diagram.png)
 
+
+## Evaluation
+
+![Example][evaluation.png]
+
+
 ## Table of Contents
 
 - [Introduction](#introduction)
