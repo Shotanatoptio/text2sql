@@ -72,7 +72,7 @@ To make the Text to SQL application user-friendly and easily accessible, it is w
 
 To run the Text to SQL application locally, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/your-username/your-repo.git`
+1. Clone this repository: `git clone https://github.com/Shotanatoptio/text2sql.git`
 2. Install the required dependencies: `pip install -r requirements.txt`
 3. Start the application: `streamlit run app.py`
 4. Access the application in your browser at `http://localhost:8501`
