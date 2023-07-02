@@ -9,7 +9,7 @@ This repository contains a Text to SQL application that efficiently converts nat
 
 ## Evaluation
 
-![Example][evaluation.png]
+![Example](evaluation.png)
 
 
 ## Table of Contents
