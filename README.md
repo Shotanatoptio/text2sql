@@ -19,8 +19,7 @@ This repository contains a Text to SQL application that efficiently converts nat
 - [Models and Libraries](#models-and-libraries)
 - [Application Interface](#application-interface)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
+- [Future Work](#future-work)
 
 ## Introduction
 
@@ -77,3 +76,14 @@ To run the Text to SQL application locally, follow these steps:
 2. Install the required dependencies: `pip install -r requirements.txt`
 3. Start the application: `streamlit run app.py`
 4. Access the application in your browser at `http://localhost:8501`
+
+
+## Future Work
+The application is just a first of version of Text2SQL program that can be improved with SOTA methodology. 
+In my opinion, these are the steps to make the app more robust, predictable, accurate, and tuned to the 
+particulad use case:
+
+1. Engineer hundreds of examples of manually checked text-query-output triples from database loggings
+2. Fine-tune either open source or OpenAI models (GPT 3.5 doesn't support fine-tuning at this moment)
+3. Create fine tuned context discriminator model that is specificaly targeted to our business case
+4. More prompt engineering
